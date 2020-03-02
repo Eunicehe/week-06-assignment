@@ -37,6 +37,7 @@ function aPlusB() {
     // console.log(add_a_value)
     //console.log(typeof add_b_value)
     //console.log(typeof add_result_value)
+    //number
     add_result_value = add_a_value + add_b_value;
     add_result.value = add_result_value;
     //console.log(typeof add_result.value)
@@ -67,11 +68,40 @@ subtract_solve.addEventListener("click", aSubtractB);
 
 
 
-let multiply_a_text = multiply_a.innerText;
-let multiply_b_text = multiply_b.innerText;
-let multiply_result_text = multiply_result.innerText;
+let multiply_a_value = multiply_a.value;
+let multiply_b_value = multiply_b.value;
+let multiply_result_value = multiply_result.value;
 
-let divide_a_text = divide_a.innerText;
-let divide_b_text = divide_b.innerText;
-let divide_result_text = divide_result.innerText;
 
+function aMultiplyB() {
+
+    multiply_a_value = parseInt(multiply_a_value, 10);
+    multiply_b_value = parseInt(multiply_b_value, 10);
+    multiply_result_value = parseInt(multiply_result_value, 10);
+
+    multiply_result_value = multiply_a_value * multiply_b_value;
+    multiply_result.value = multiply_result_value;
+
+}
+
+multiply_solve.addEventListener("click", aMultiplyB);
+
+
+
+let divide_a_value = divide_a.value;
+let divide_b_value = divide_b.value;
+let divide_result_value = divide_result.value;
+
+
+function adivideB() {
+
+    divide_a_value = parseInt(divide_a_value, 10);
+    divide_b_value = parseInt(divide_b_value, 10);
+    divide_result_value = parseInt(divide_result_value, 10);
+
+    divide_result_value = divide_a_value / divide_b_value;
+    divide_result.value = divide_result_value;
+
+}
+
+divide_solve.addEventListener("click", adivideB);
